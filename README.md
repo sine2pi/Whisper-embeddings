@@ -33,9 +33,9 @@ Creating and testing out whisper-like transformers with various embedding schema
         return logits
 
 
-# Rotary Encoder, Sinusoidal Decoder:
-# AudioEncoder: Uses rotary embeddings.
-# TextDecoder: Uses sinusoidal embeddings for positional encoding.
+    # Rotary Encoder, Sinusoidal Decoder:
+    # AudioEncoder: Uses rotary embeddings.
+    # TextDecoder: Uses sinusoidal embeddings for positional encoding.
 
     class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
@@ -65,9 +65,9 @@ Creating and testing out whisper-like transformers with various embedding schema
         return logits
 
 
-# Rotary Encoder, Rotary-Sinusoidal Decoder:
-# AudioEncoder: Uses rotary embeddings.
-# TextDecoder: Combines rotary embeddings within the attention mechanisms with sinusoidal embeddings for positional encoding.
+    # Rotary Encoder, Rotary-Sinusoidal Decoder:
+    # AudioEncoder: Uses rotary embeddings.
+    # TextDecoder: Combines rotary embeddings within the attention mechanisms with sinusoidal embeddings for positional encoding.
 
     class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
@@ -98,9 +98,9 @@ Creating and testing out whisper-like transformers with various embedding schema
 
         return logits
 
-# Rotary Encoder, Learned Sinusoidal Decoder:
-# AudioEncoder: Uses rotary embeddings.
-# TextDecoder: Uses learned sinusoidal embeddings initialized with a sinusoidal pattern.
+    # Rotary Encoder, Learned Sinusoidal Decoder:
+    # AudioEncoder: Uses rotary embeddings.
+    # TextDecoder: Uses learned sinusoidal embeddings initialized with a sinusoidal pattern.
 
     class LearnedSinusoidalEmbeddings(nn.Module):
     def __init__(self, n_ctx, n_state):
