@@ -7,7 +7,7 @@ Creating and testing out whisper-like transformers with various embedding schema
 # AudioEncoder: Uses rotary embeddings.
 # TextDecoder: Uses rotary embeddings within the attention mechanisms
 
-class TextDecoder(nn.Module):
+    class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
         super().__init__()
 
@@ -37,7 +37,7 @@ class TextDecoder(nn.Module):
 # AudioEncoder: Uses rotary embeddings.
 # TextDecoder: Uses sinusoidal embeddings for positional encoding.
 
-class TextDecoder(nn.Module):
+    class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
         super().__init__()
 
@@ -69,7 +69,7 @@ class TextDecoder(nn.Module):
 # AudioEncoder: Uses rotary embeddings.
 # TextDecoder: Combines rotary embeddings within the attention mechanisms with sinusoidal embeddings for positional encoding.
 
-class TextDecoder(nn.Module):
+    class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
         super().__init__()
 
@@ -102,7 +102,7 @@ class TextDecoder(nn.Module):
 # AudioEncoder: Uses rotary embeddings.
 # TextDecoder: Uses learned sinusoidal embeddings initialized with a sinusoidal pattern.
 
-class LearnedSinusoidalEmbeddings(nn.Module):
+    class LearnedSinusoidalEmbeddings(nn.Module):
     def __init__(self, n_ctx, n_state):
         super().__init__()
         self.n_ctx = n_ctx
@@ -116,7 +116,7 @@ class LearnedSinusoidalEmbeddings(nn.Module):
         position_embeddings = self.positional_embeddings[positions]
         return position_embeddings
 
-class TextDecoder(nn.Module):
+    class TextDecoder(nn.Module):
     def __init__(self, n_vocab: int, n_ctx: int, n_state: int, n_head: int, n_layer: int):
         super().__init__()
 
